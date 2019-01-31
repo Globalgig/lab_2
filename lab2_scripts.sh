@@ -16,6 +16,11 @@ grep -c '[0-9]\{3\}[-][0-9]\{3\}[-][0-9]\{4\}' regex_practice.txt
 #Counts the number of @ signs to find all emails
 grep -c '[@]' regex_practice.txt
 
-grep -l '[3][0][3]' regex_practice.txt
+#Writes everything ending in 303-
+grep "303-" regex_practice.txt > phone_results.txt
 
-grep -c '*[@]*[.com]' regex_practice.txt
+#Finds all things from @geocities
+grep "@geocities.com" regex_practice.txt > email_results.txt
+
+#Takes the first command line expression and stores it
+grep $1 > command_results.txt
